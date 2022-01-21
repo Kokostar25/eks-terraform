@@ -22,7 +22,10 @@ resource "aws_iam_role_policy_attachment" "AmazonEKSClusterPolicy" {
   role       = aws_iam_role.eks_cluster.name
 }
 
-
+resource "aws_iam_role_policy_attachment" "AmazonEKSServicePolicy" {
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
+  role       = aws_iam_role.eks_cluster.name
+}
 
 # Ensure that AmazonEKSWorkerNodePolicy and AmazonEC2ContainerRegistryReadOnly managed policies are attached to the role.
 resource "aws_iam_role" "eks_nodes" {
