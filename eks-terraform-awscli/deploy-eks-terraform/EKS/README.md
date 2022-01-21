@@ -1,4 +1,4 @@
-## H2 This repo is about deploying eks cluster using terraform
+## This repo is about deploying eks cluster using terraform
 
 
 
